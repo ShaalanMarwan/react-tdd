@@ -9,10 +9,13 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
@@ -21,3 +24,4 @@
   }
   // "extends": "./base-tsconfig.json",
 }
+    // "strict": true,

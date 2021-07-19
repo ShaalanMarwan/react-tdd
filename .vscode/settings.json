@@ -1,3 +1,6 @@
 {
-    "jest.jestCommandLine": "a.spec.ts"
+    "jest.jestCommandLine": "a.spec.ts",
+    "cSpell.words": [
+        "usecases"
+    ]
 }
