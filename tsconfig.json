@@ -6,11 +6,8 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "baseUrl": "src",
     "paths": {
@@ -19,9 +16,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "noEmit": true,
     "jsx": "react-jsx"
   }
-  // "extends": "./base-tsconfig.json",
 }
+// "extends": "./base-tsconfig.json",
     // "strict": true,
