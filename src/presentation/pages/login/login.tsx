@@ -1,27 +1,31 @@
 import React from "react";
-import Spinner from "@/presentation/components/spinner/spinner";
+import {
+  Footer,
+  FormStatusBase,
+  Header,
+  InputBase,
+  
+} from "@/presentation/components/";
 import Styles from "./login-styles.scss";
-import Logo from "@/presentation/components/logo/logo";
-import Header from "@/presentation/components/login-header/login-header";
 const Login: React.FC = () => {
   return (
     <div className={Styles.login}>
       <Header />
       <form className={Styles.form}>
         <h2>Login</h2>
-        <input type="email" className="form-control" placeholder="email" />
-        <span>XX</span>
-        <input
+        <InputBase type="email" className="form-control" placeholder="email" />
+        <InputBase
           type="password"
           className="form-control"
           placeholder="password"
         />
-        {/* <Spinner /> */}
-        <button type="submit" className="btn b">
+        <button type="submit" className={Styles.submit}>
           Enter
         </button>
+        <span className={Styles.link}>Create an account</span>
+        <FormStatusBase />
       </form>
-      <footer className={Styles.footer}></footer>
+      <Footer />
     </div>
   );
 };
