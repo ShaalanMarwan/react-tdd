@@ -6,8 +6,8 @@ type Props = React.DetailedHTMLProps<
 >;
 const Input: React.FC<Props> = (props: Props) => {
   return (
-    <div className={Styles.inputWarp}>
-      <input {...props} />
+    <div  className={Styles.inputWarp}>
+      <input autoComplete="off" {...props} />
       <span className={Styles.status}>X</span>
     </div>
   );
