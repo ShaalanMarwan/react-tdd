@@ -1,6 +1,8 @@
 {
     "jest.jestCommandLine": "a.spec.ts",
     "cSpell.words": [
+        "localstorage",
+        "signup",
         "testid",
         "usecases"
     ]
