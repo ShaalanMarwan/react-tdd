@@ -13,8 +13,8 @@ const Login: React.FC<Props> = ({ validation }: Props) => {
     isLoading: false,
     email: '',
     password: '',
-    emailError: 'Campo obrigatório',
-    passwordError: 'Campo obrigatório',
+    emailError: 'Required Field',
+    passwordError: 'Required Field',
     mainError: ''
   })
   useEffect(() => {

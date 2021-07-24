@@ -7,22 +7,12 @@ import {
 } from "@testing-library/react";
 import Login from "./login";
 import { Validation } from "@/presentation/protocols/validation";
+import { ValidationSpy } from "@/presentation/test/mock-validation";
 
 type SutTypes = {
   sut: RenderResult;
   validationSpy: ValidationSpy;
 };
-
-class ValidationSpy implements Validation {
-  errorMessage: string;
-  filedName: string;
-  filedValue: string;
-  validate(filedName: string, filedValue: string): string {
-    this.filedName = filedName;
-    this.filedValue = filedValue;
-    return this.errorMessage;
-  }
-}
 
 const makeSut = (): SutTypes => {
   const validationSpy = new ValidationSpy();
@@ -43,10 +33,10 @@ describe("Login Component", () => {
     const submitButton = sut.getByTestId("submit") as HTMLButtonElement;
     expect(submitButton.disabled).toBe(true);
     const emailStatus = sut.getByTestId("email-status");
-    expect(emailStatus.title).toBe("Campo obrigatório");
+    expect(emailStatus.title).toBe("Required Field");
     expect(emailStatus.textContent).toBe("🔴");
     const passwordStatus = sut.getByTestId("password-status");
-    expect(passwordStatus.title).toBe("Campo obrigatório");
+    expect(passwordStatus.title).toBe("Required Field");
     expect(passwordStatus.textContent).toBe("🔴");
   });
 
