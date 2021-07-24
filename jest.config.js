@@ -13,10 +13,10 @@ module.exports = {
   ],
   testEnvironment: 'jsdom',
   transform: {
-    '.+\\.(ts|tsx)$': 'ts-jest'
+    '.+\\.(ts|tsx)': 'ts-jest'
   },
   moduleNameMapper: {
-    '@/components/(.*)/$': '<rootDir>/src/$1',
+    '@/(.*)/': '<rootDir>/src/',
     '\\.scss$': 'identity-obj-proxy'
   }
 }
